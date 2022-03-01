@@ -43,7 +43,7 @@ class _WizardScreenState extends State<WizardScreen> {
               ], begin: Alignment.topCenter, end: Alignment.bottomCenter),
               text: 'Get Started',
               onPressed: () {
-                Navigator.popAndPushNamed(context, AppRoutes.homeRoute);
+                Navigator.popAndPushNamed(context, AppRoutes.appRoute);
               },
             ),
           ),
