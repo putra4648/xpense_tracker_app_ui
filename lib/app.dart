@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:income_expense_tracker_app/screens/account_screen.dart';
 import 'package:income_expense_tracker_app/screens/home_screen.dart';
 import 'package:income_expense_tracker_app/screens/statisctic_screen.dart';
+import 'package:income_expense_tracker_app/screens/wallet_screen.dart';
 
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
@@ -10,7 +12,12 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  final _screens = <Widget>[const HomeScreen(), const StatisticScreen()];
+  final _screens = <Widget>[
+    const HomeScreen(),
+    const StatisticScreen(),
+    const WalletScreen(),
+    const AccountScreen()
+  ];
   int index = 0;
 
   @override
@@ -29,6 +36,7 @@ class _AppState extends State<App> {
         elevation: 10,
         showSelectedLabels: false,
         showUnselectedLabels: false,
+        currentIndex: index,
         type: BottomNavigationBarType.fixed,
         onTap: (index) {
           setState(() {
