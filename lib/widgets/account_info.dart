@@ -31,7 +31,7 @@ class AccountInformation extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             child: Badge(
               child: Icon(
-                Icons.notifications,
+                Icons.notifications_outlined,
                 color: Theme.of(context).iconTheme.color,
               ),
               badgeColor: const Color(0xffFFAB7B),
@@ -49,12 +49,12 @@ class AccountInformation extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(boxShadow: [
               BoxShadow(
-                color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
+                color: Theme.of(context).colorScheme.primary.withOpacity(0.2),
                 offset: const Offset(10, 30),
                 blurRadius: 50,
               ),
               BoxShadow(
-                color: Theme.of(context).colorScheme.primary.withOpacity(0.5),
+                color: Theme.of(context).colorScheme.primary.withOpacity(0.2),
                 offset: const Offset(-10, 30),
                 blurRadius: 50,
               ),

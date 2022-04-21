@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
-
-import 'account_info.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Header extends StatelessWidget {
-  const Header({
-    Key? key,
-  }) : super(key: key);
+  const Header({Key? key, this.child, this.height = 0.35}) : super(key: key);
+
+  final double height;
+  final Widget? child;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.35,
+      height: ScreenUtil().screenHeight * height,
       decoration: const BoxDecoration(
         gradient: LinearGradient(
-          colors: [
-            Color.fromRGBO(66, 150, 144, 1),
-            Color.fromRGBO(42, 124, 118, 1),
-          ],
+          colors: [Color(0xff429690), Color(0xff2A7C76)],
           begin: Alignment.bottomCenter,
           end: Alignment.topCenter,
         ),
@@ -42,10 +39,7 @@ class Header extends StatelessWidget {
             textDirection: TextDirection.ltr,
             child: Image.asset('assets/ellipse_7.png'),
           ),
-          const Positioned.fill(
-            bottom: -100,
-            child: AccountInformation(),
-          )
+          child ?? const SizedBox.shrink()
         ],
       ),
     );

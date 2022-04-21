@@ -28,7 +28,7 @@ class TotalBalance extends StatelessWidget {
               onPressed: () {},
               icon: Icon(
                 Icons.more_horiz,
-                size: Theme.of(context).iconTheme.size! * 1.5,
+                size: Theme.of(context).iconTheme.size,
                 color: Theme.of(context).iconTheme.color,
               ),
             ),

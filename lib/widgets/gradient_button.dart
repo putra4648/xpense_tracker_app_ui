@@ -22,7 +22,7 @@ class GradientButton extends StatelessWidget {
         gradient: gradient,
         boxShadow: [
           BoxShadow(
-            color: Theme.of(context).primaryColor.withOpacity(0.5),
+            color: Theme.of(context).primaryColor.withOpacity(0.2),
             offset: const Offset(0, 10),
             blurRadius: 50,
           ),

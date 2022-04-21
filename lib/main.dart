@@ -17,23 +17,22 @@ class MyApp extends StatelessWidget {
       builder: () => MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData.light().copyWith(
-            colorScheme: const ColorScheme.light(
-              primary: Color.fromRGBO(66, 136, 131, 1),
-              secondary: Colors.white,
+          colorScheme: const ColorScheme.light(
+            primary: Color.fromRGBO(66, 136, 131, 1),
+            secondary: Colors.white,
+          ),
+          textTheme: GoogleFonts.interTextTheme().apply(
+            bodyColor: Colors.white,
+            displayColor: Colors.white,
+          ),
+          buttonTheme: ButtonThemeData(
+            colorScheme: Theme.of(context).colorScheme,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
             ),
-            textTheme: GoogleFonts.interTextTheme().apply(
-              bodyColor: Colors.white,
-              displayColor: Colors.white,
-            ),
-            iconTheme: IconTheme.of(context).copyWith(color: Colors.white),
-            elevatedButtonTheme: ElevatedButtonThemeData(
-                style: ElevatedButton.styleFrom(
-              primary: Theme.of(context).colorScheme.primary,
-            )),
-            textButtonTheme: TextButtonThemeData(
-                style: TextButton.styleFrom(
-              primary: Theme.of(context).colorScheme.primary,
-            ))),
+          ),
+          iconTheme: IconTheme.of(context).copyWith(color: Colors.white),
+        ),
         darkTheme: ThemeData.dark().copyWith(
           textTheme: GoogleFonts.interTextTheme(),
         ),
