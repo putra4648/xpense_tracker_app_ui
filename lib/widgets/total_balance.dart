@@ -20,7 +20,10 @@ class TotalBalance extends StatelessWidget {
             IconButton(
               padding: EdgeInsets.zero,
               onPressed: () {},
-              icon: const Icon(Icons.keyboard_arrow_up),
+              icon: Icon(
+                Icons.keyboard_arrow_up,
+                color: Theme.of(context).colorScheme.onPrimary,
+              ),
             ),
             const Spacer(),
             IconButton(
@@ -28,8 +31,7 @@ class TotalBalance extends StatelessWidget {
               onPressed: () {},
               icon: Icon(
                 Icons.more_horiz,
-                size: Theme.of(context).iconTheme.size,
-                color: Theme.of(context).iconTheme.color,
+                color: Theme.of(context).colorScheme.onPrimary,
               ),
             ),
           ],

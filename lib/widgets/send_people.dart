@@ -8,19 +8,12 @@ class SendPeople extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ListTileTheme(
-          data: ListTileTheme.of(context).copyWith(
-            textColor: Colors.black,
-            iconColor: Colors.black,
+        ListTile(
+          title: const Text(
+            'Send Again',
+            style: TextStyle(fontWeight: FontWeight.w600),
           ),
-          child: ListTile(
-            title: const Text(
-              'Send Again',
-              style: TextStyle(fontWeight: FontWeight.w600),
-            ),
-            trailing:
-                TextButton(onPressed: () {}, child: const Text('See all')),
-          ),
+          trailing: TextButton(onPressed: () {}, child: const Text('See all')),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10),

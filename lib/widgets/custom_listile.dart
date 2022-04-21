@@ -30,7 +30,7 @@ class CustomListTile extends StatelessWidget {
                 padding: const EdgeInsets.all(5),
                 child: Icon(
                   icons,
-                  color: Theme.of(context).iconTheme.color,
+                  color: Theme.of(context).colorScheme.onPrimary,
                 ),
                 shape: const CircleBorder(),
               ),

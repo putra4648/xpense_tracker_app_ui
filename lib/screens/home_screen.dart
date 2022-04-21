@@ -10,22 +10,18 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Theme(
-        data: Theme.of(context)
-            .copyWith(textTheme: Theme.of(context).textTheme.apply()),
-        child: SafeArea(
-          child: ListView(
-            children: const [
-              Header(
-                child: Positioned.fill(
-                  bottom: -100,
-                  child: AccountInformation(),
-                ),
+      body: SafeArea(
+        child: ListView(
+          children: const [
+            Header(
+              child: Positioned.fill(
+                bottom: -100,
+                child: AccountInformation(),
               ),
-              TransactionHistory(),
-              SendPeople(),
-            ],
-          ),
+            ),
+            TransactionHistory(),
+            SendPeople(),
+          ],
         ),
       ),
     );

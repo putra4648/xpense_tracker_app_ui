@@ -16,6 +16,7 @@ class AccountScreen extends StatelessWidget {
         title: const Text('Profile'),
         centerTitle: true,
         titleTextStyle: Theme.of(context).textTheme.titleMedium?.copyWith(
+              color: Theme.of(context).colorScheme.onPrimary,
               fontWeight: FontWeight.w600,
             ),
         leading: IconButton(
@@ -29,78 +30,69 @@ class AccountScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: Theme(
-        data: Theme.of(context).copyWith(
-          textTheme: Theme.of(context).textTheme.apply(
-                bodyColor: Colors.black,
-                displayColor: Colors.black,
-              ),
-          listTileTheme: const ListTileThemeData(
-            iconColor: Colors.black,
-          ),
-        ),
-        child: ListView(
-          padding: const EdgeInsets.only(top: 0),
-          children: [
-            Header(
-              child: Positioned(
-                left: 0,
-                right: 0,
-                bottom: -100,
-                child: Column(
-                  children: [
-                    CircleAvatar(
-                      radius: ScreenUtil().setHeight(48),
-                      backgroundColor: Colors.white,
-                      child: FlutterLogo(
-                        size: ScreenUtil().setHeight(48),
-                      ),
+      body: ListView(
+        padding: const EdgeInsets.only(top: 0),
+        children: [
+          Header(
+            child: Positioned(
+              left: 0,
+              right: 0,
+              bottom: -100,
+              child: Column(
+                children: [
+                  CircleAvatar(
+                    radius: ScreenUtil().setHeight(48),
+                    backgroundColor: Colors.white,
+                    child: FlutterLogo(
+                      size: ScreenUtil().setHeight(48),
                     ),
-                    SizedBox(
-                      height: ScreenUtil().setHeight(10),
-                    ),
-                    Text(
-                      'Jonatahan Buddy',
-                      style: Theme.of(context).textTheme.headline6?.copyWith(
-                          fontWeight: FontWeight.w600, color: Colors.black),
-                    ),
-                    SizedBox(
-                      height: ScreenUtil().setHeight(5),
-                    ),
-                    Text(
-                      'jonathan@yahoo.co.uk',
-                      style: Theme.of(context).textTheme.bodyText1?.copyWith(
-                            color: Theme.of(context).colorScheme.primary,
-                          ),
-                    )
-                  ],
-                ),
+                  ),
+                  SizedBox(
+                    height: ScreenUtil().setHeight(10),
+                  ),
+                  Text(
+                    'Jonatahan Buddy',
+                    style: Theme.of(context)
+                        .textTheme
+                        .headline6
+                        ?.copyWith(fontWeight: FontWeight.w600),
+                  ),
+                  SizedBox(
+                    height: ScreenUtil().setHeight(5),
+                  ),
+                  Text(
+                    'jonathan@yahoo.co.uk',
+                    style: Theme.of(context).textTheme.bodyText1?.copyWith(
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                  )
+                ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 120),
-              child: Column(
-                  children: accountMenus
-                      .map(
-                        (acc) => acc['id']! as int == 0
-                            ? Column(
-                                children: [
-                                  ListTile(
-                                    title: Text(acc['name'] as String),
-                                    leading: Icon(acc['icon'] as IconData),
-                                  ),
-                                  const Divider(indent: 20, endIndent: 20)
-                                ],
-                              )
-                            : ListTile(
-                                title: Text(acc['name'] as String),
-                                leading: Icon(acc['icon'] as IconData),
-                              ),
-                      )
-                      .toList()),
-            )
-          ],
-        ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 120),
+            child: Column(
+                children: accountMenus
+                    .map(
+                      (acc) => acc['id']! as int == 0
+                          ? Column(
+                              children: [
+                                ListTile(
+                                  title: Text(acc['name'] as String),
+                                  leading: Icon(acc['icon'] as IconData),
+                                ),
+                                const Divider(indent: 20, endIndent: 20)
+                              ],
+                            )
+                          : ListTile(
+                              title: Text(acc['name'] as String),
+                              leading: Icon(acc['icon'] as IconData),
+                            ),
+                    )
+                    .toList()),
+          )
+        ],
       ),
     );
   }

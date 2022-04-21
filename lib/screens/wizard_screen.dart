@@ -52,7 +52,6 @@ class _WizardScreenState extends State<WizardScreen> {
             children: [
               const Text(
                 'Already Have Account?',
-                style: TextStyle(color: Colors.black),
               ),
               TextButton(onPressed: () {}, child: const Text('Log In'))
             ],

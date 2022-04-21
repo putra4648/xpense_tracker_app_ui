@@ -29,7 +29,7 @@ class _AppState extends State<App> {
         backgroundColor: Theme.of(context).colorScheme.primary,
         child: Icon(
           Icons.add,
-          color: IconTheme.of(context).color,
+          color: Theme.of(context).colorScheme.onPrimary,
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(

@@ -26,25 +26,13 @@ class _StatisticScreenState extends State<StatisticScreen> {
       Theme.of(context).colorScheme.primary.withOpacity(0.5),
     ];
     return Theme(
-      data: Theme.of(context).copyWith(
-        textTheme: Theme.of(context).textTheme.apply(
-              bodyColor: Colors.black,
-              displayColor: Colors.black,
-            ),
-        listTileTheme: const ListTileThemeData(
-          iconColor: Colors.black,
-        ),
-      ),
+      data: Theme.of(context).copyWith(),
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          backgroundColor: Colors.white,
-          iconTheme: const IconThemeData(
-            color: Colors.black,
-          ),
           titleTextStyle: Theme.of(context).textTheme.titleMedium?.copyWith(
-                color: Colors.black,
                 fontWeight: FontWeight.w600,
+                color: Theme.of(context).colorScheme.background,
               ),
           elevation: 0,
           leading: IconButton(
@@ -238,7 +226,6 @@ class _StatisticScreenState extends State<StatisticScreen> {
                 'Top Spending',
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(
                       fontWeight: FontWeight.w600,
-                      color: Colors.black,
                     ),
               ),
               trailing: IconButton(
@@ -265,8 +252,8 @@ class _StatisticScreenState extends State<StatisticScreen> {
                                     .colorScheme
                                     .primary
                                     .withOpacity(0.2),
-                                offset: const Offset(-10, 30),
-                                blurRadius: 50,
+                                offset: const Offset(-10, 20),
+                                blurRadius: 20,
                               ),
                             ])
                           : null,
